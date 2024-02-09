@@ -1,0 +1,54 @@
+O que essa API faz:
+Autenticação de usuários: Permite que os usuários façam login e recebam um token de acesso.
+Gerenciamento de reclamações: Permite que os usuários autenticados criem, listem, atualizem e excluam suas reclamações.
+
+Como usar a API:
+Login:
+Endpoint: /login
+Método: POST
+Corpo da requisição: JSON com o nome de usuário e senha.
+Resposta: Retorna um token de acesso JWT válido por 24 horas.
+
+Criar reclamação:
+Endpoint: /reclamacoes
+Método: POST
+Corpo da requisição: JSON com título e descrição da reclamação.
+Cabeçalho da requisição: Token de acesso JWT no cabeçalho x-access-token.
+Resposta: Retorna uma mensagem indicando que a reclamação foi criada com sucesso.
+
+Listar reclamações:
+Endpoint: /reclamacoes
+Método: GET
+Cabeçalho da requisição: Token de acesso JWT no cabeçalho x-access-token.
+Resposta: Retorna uma lista das reclamações do usuário autenticado.
+
+Atualizar reclamação:
+Endpoint: /reclamacoes/<id>
+Método: PUT
+Corpo da requisição: JSON com os campos que devem ser atualizados (título e/ou descrição).
+Cabeçalho da requisição: Token de acesso JWT no cabeçalho x-access-token.
+Resposta: Retorna uma mensagem indicando que a reclamação foi atualizada com sucesso.
+
+Excluir reclamação:
+Endpoint: /reclamacoes/<id>
+Método: DELETE
+Cabeçalho da requisição: Token de acesso JWT no cabeçalho x-access-token.
+Resposta: Retorna uma mensagem indicando que a reclamação foi excluída com sucesso.
+Como testar a API:
+
+Login:
+Faça uma requisição POST para /login com o nome de usuário e senha no corpo da requisição.
+Copie o token de acesso retornado na resposta.
+
+Criar reclamação:
+Faça uma requisição POST para /reclamacoes com o token de acesso no cabeçalho x-access-token e os dados da reclamação no corpo da requisição.
+
+Listar reclamações:
+Faça uma requisição GET para /reclamacoes com o token de acesso no cabeçalho x-access-token.
+
+Atualizar reclamação:
+Faça uma requisição PUT para /reclamacoes/<id> com o token de acesso no cabeçalho x-access-token e os dados da reclamação a serem atualizados no corpo da requisição.
+
+Excluir reclamação:
+Faça uma requisição DELETE para /reclamacoes/<id> com o token de acesso no cabeçalho x-access-token.
+Lembre-se de substituir <id> pelo ID da reclamação que deseja atualizar ou excluir.
