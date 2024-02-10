@@ -31,4 +31,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/API-Reclamacao-Jezrell:$(date +%s)
+          tags: ${{ secrets.DOCKERHUB_USER }}/API-Reclamacao-Jezrell:$(date +%s)
