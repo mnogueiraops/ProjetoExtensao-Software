@@ -19,7 +19,7 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # Expose the app port
-EXPOSE 5000
+EXPOSE 443
 
 # Run the application
 CMD ["python", "app.py"]
