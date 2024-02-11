@@ -20,6 +20,6 @@ COPY . .
 
 # Expose the app port
 EXPOSE 443
-
+EXPOSE 80
 # Run the application
 CMD ["python", "app.py"]
