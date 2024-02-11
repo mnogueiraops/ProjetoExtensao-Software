@@ -122,4 +122,4 @@ def deletar_reclamacao(usuario_atual, id):
     return jsonify({'message': 'Reclamação excluída com sucesso!'}), 200
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=443, ssl_context='adhoc')
+    app.run(debug=True, host='0.0.0.0', port=80, ssl_context='adhoc')
